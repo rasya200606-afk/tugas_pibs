@@ -3,251 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Anggota - Muhammad Rasya Akbar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Biodata Mahasiswa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .foto {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #fff;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            color: #4facfe;
+            border-left: 4px solid #4facfe;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .biodata-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .biodata-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e0e0e0;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .biodata-list li:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            color: #777;
+            font-weight: 500;
+        }
+
+        .value {
+            font-weight: 600;
+            color: #222;
+            text-align: right;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer .btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .footer .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .biodata-list li {
+                flex-direction: column;
+                gap: 4px;
+            }
+            .value {
+                text-align: left;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="card">
+        <!-- Header -->
+        <div class="header">
+            <div class="foto">👨‍🎓</div>
+            <h1>Andi Pratama</h1>
+            <p>NIM: 202301001</p>
+        </div>
 
-    <header>
-        <h1>2025081021 - Muhammad Rasya Akbar</h1>
-        <p>Platform Pengelolaan Volunteer dan Kegiatan Sosial</p>
-    </header>
+        <!-- Content -->
+        <div class="content">
+            <h2 class="section-title">Data Pribadi</h2>
+            <ul class="biodata-list">
+                <li>
+                    <span class="label">Nama Lengkap</span>
+                    <span class="value">Andi Pratama</span>
+                </li>
+                <li>
+                    <span class="label">Tempat, Tanggal Lahir</span>
+                    <span class="value">Jakarta, 15 Mei 2005</span>
+                </li>
+                <li>
+                    <span class="label">Jenis Kelamin</span>
+                    <span class="value">Laki-laki</span>
+                </li>
+                <li>
+                    <span class="label">Alamat</span>
+                    <span class="value">Jl. Merdeka No. 10, Bandung</span>
+                </li>
+                <li>
+                    <span class="label">No. Telepon</span>
+                    <span class="value">0812-3456-7890</span>
+                </li>
+                <li>
+                    <span class="label">Email</span>
+                    <span class="value">andi.pratama@email.com</span>
+                </li>
+            </ul>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="profileRasya.html">Profil Saya</a>
-    </nav>
+            <h2 class="section-title">Data Akademik</h2>
+            <ul class="biodata-list">
+                <li>
+                    <span class="label">Program Studi</span>
+                    <span class="value">Teknik Informatika</span>
+                </li>
+                <li>
+                    <span class="label">Fakultas</span>
+                    <span class="value">Fakultas Teknik</span>
+                </li>
+                <li>
+                    <span class="label">Angkatan</span>
+                    <span class="value">2023</span>
+                </li>
+                <li>
+                    <span class="label">Semester</span>
+                    <span class="value">4 (Empat)</span>
+                </li>
+                <li>
+                    <span class="label">IPK</span>
+                    <span class="value">3.75 / 4.00</span>
+                </li>
+            </ul>
+        </div>
 
-    <main>
-        <section class="hero">
-            <h2>Selamat Datang</h2>
-            <p>
-                Website ini merupakan rancangan platform untuk
-                mengelola kegiatan volunteer dan kegiatan sosial.
-            </p>
-
-            <a class="button" href="profileRasya.html">
-                Lihat Profil
-            </a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Kelompok PIBS</p>
-    </footer>
-
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 Kartu Biodata Mahasiswa</p>
+            <a href="#" class="btn">Cetak Biodata</a>
+        </div>
+    </div>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Profil Rasya</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <header>
-        <h1>2025081021 - Muhammad Rasya Akbar</h1>
-        <p>Platform Pengelolaan Volunteer dan Kegiatan Sosial</p>
-    </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="profileRasya.html">Profil</a>
-    </nav>
-
-    <main>
-
-        <section class="profile">
-
-            <div class="profile-photo">
-                <div class="photo-placeholder">
-                    FOTO
-                </div>
-            </div>
-
-            <div class="profile-info">
-
-                <h2>Rasya Akbar</h2>
-
-                <p>
-                    <strong>Program Studi:</strong>
-                    Sistem Informasi
-                </p>
-
-                <p>
-                    <strong>Universitas:</strong>
-                    Universitas Pembangunan Jaya
-                </p>
-
-                <p>
-                    <strong>Mata Kuliah:</strong>
-                    Pengolahan Informasi Berbasis Pemrograman Script
-                </p>
-
-                <p>
-                    <strong>Hobi:</strong>
-                    Teknologi, belajar pemrograman, dan bermain game
-                </p>
-
-                <p>
-                    <strong>Deskripsi:</strong>
-                    Saya adalah mahasiswa yang memiliki ketertarikan
-                    terhadap teknologi informasi dan pengembangan aplikasi
-                    berbasis web.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Kelompok PIBS</p>
-    </footer>
-
-</body>
-</html>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-}
-
-header {
-    background-color: #2563eb;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-nav {
-    background-color: white;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav a {
-    text-decoration: none;
-    color: #2563eb;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.hero {
-    background-color: white;
-    padding: 50px 30px;
-    text-align: center;
-    border-radius: 12px;
-}
-
-.hero h2 {
-    margin-bottom: 15px;
-}
-
-.hero p {
-    margin-bottom: 25px;
-}
-
-.button {
-    display: inline-block;
-    background-color: #2563eb;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-.button:hover {
-    background-color: #1d4ed8;
-}
-
-.profile {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.profile-photo {
-    flex: 1;
-    text-align: center;
-}
-
-.photo-placeholder {
-    width: 180px;
-    height: 180px;
-    margin: auto;
-    border-radius: 50%;
-    background-color: #dbeafe;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2563eb;
-    font-weight: bold;
-}
-
-.profile-info {
-    flex: 2;
-}
-
-.profile-info h2 {
-    margin-bottom: 20px;
-}
-
-.profile-info p {
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: #1f2937;
-    color: white;
-}
-
-@media (max-width: 700px) {
-
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
-
-}
